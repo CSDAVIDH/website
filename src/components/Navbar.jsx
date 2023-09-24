@@ -17,16 +17,18 @@ const Navbar = () => {
             <FaHome />
             <span className='italic text-green-700'>Desing</span>
   </div>*/}
-          <Image
+
+          {<Image
             src="/images/set.png"
             width={500 / 5}
             height={500 / 5}
             alt="Picture of the author"
-          />
+          />}
+
 
           <div className='hidden md:flex gap-10 tracking-wider text-gay-600'>
-            <Link href="/" className='hover:text-green-700'>Home</Link>
-            <Link href="/" className='hover:text-green-700'>Product</Link>
+            <Link href="#home" className='hover:text-green-700'>Home</Link>
+            <Link href="#product" className='hover:text-green-700'>Product</Link>
             <Link href="/" className='hover:text-green-700'>Categories</Link>
             <Link href="/" className='hover:text-green-700'>Services</Link>
           </div>
@@ -41,8 +43,8 @@ const Navbar = () => {
         </div>
         {/*Responsive Menu*/}
         <div className={`duration-300 md:hidden flex flex-col w-[50%] h-screen fixed bg-black/50  rounded-r-lg text-white top-[110px] ${toggle ? `left-[0]` : `left-[-100%]`}`}>
-          <Link href="/" className='hover:text-green-700 p-3'>Home</Link>
-          <Link href="/" className='hover:text-green-700 p-3'>Product</Link>
+          <Link href="#home" className='hover:text-green-700 p-3'>Home</Link>
+          <Link href="#product" className='hover:text-green-700 p-3'>Product</Link>
           <Link href="/" className='hover:text-green-700 p-3'>Categories</Link>
           <Link href="/" className='hover:text-green-700 p-3'>Services</Link>
 
