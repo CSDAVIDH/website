@@ -29,7 +29,7 @@ const Navbar = () => {
           <div className='hidden md:flex gap-10 tracking-wider text-gay-600'>
             <Link href="#home" className='hover:text-green-700'>Home</Link>
             <Link href="#product" className='hover:text-green-700'>Product</Link>
-            <Link href="/" className='hover:text-green-700'>Categories</Link>
+            <Link href="#categorie" className='hover:text-green-700'>Categories</Link>
             <Link href="/" className='hover:text-green-700'>Services</Link>
           </div>
           <div>
@@ -45,7 +45,7 @@ const Navbar = () => {
         <div className={`duration-300 md:hidden flex flex-col w-[50%] h-screen fixed bg-black/50  rounded-r-lg text-white top-[110px] ${toggle ? `left-[0]` : `left-[-100%]`}`}>
           <Link href="#home" className='hover:text-green-700 p-3'>Home</Link>
           <Link href="#product" className='hover:text-green-700 p-3'>Product</Link>
-          <Link href="/" className='hover:text-green-700 p-3'>Categories</Link>
+          <Link href="#categorie" className='hover:text-green-700 p-3'>Categories</Link>
           <Link href="/" className='hover:text-green-700 p-3'>Services</Link>
 
           <div className='flex flex-col gap-5 items-center mt-32'>
