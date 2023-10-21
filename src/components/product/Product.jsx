@@ -8,15 +8,15 @@ const Product = () => {
 
       <Headline title="Products" />
       <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 py-16'>
-        <Card image="/images/2.jpg" title="Red de datos" />
-        <Card image="/images/3.jpg" title="2" />
-        <Card image="/images/4.jpg" title="2" />
-        <Card image="/images/2.jpg" title="Red de datos" />
-        <Card image="/images/3.jpg" title="2" />
-        <Card image="/images/4.jpg" title="2" />
-        <Card image="/images/2.jpg" title="Red de datos" />
-        <Card image="/images/3.jpg" title="2" />
-        <Card image="/images/4.jpg" title="2" />
+        <Card image="/icons/computacion.png" title="Computing" />
+        <Card image="/icons/megafono.png" title="Neighborhood electronic security" />
+        <Card image="/icons/alarma.png" title="Electronic security" />
+        <Card image="/icons/cctv.png" title="Video surveillance security" />
+        <Card image="/icons/enrutador.png" title=" FTTH & HFC fiber optic network" />
+        <Card image="/icons/red.png" title="Data network" />
+        <Card image="/icons/energia.png" title="Energy solutions" />
+        <Card image="/icons/torre.png" title="Station telephone" />
+        <Card image="/icons/consultor.png" title="Architectural consulting & planning" />
       </div>
 
     </section>
@@ -24,3 +24,4 @@ const Product = () => {
 }
 
 export default Product
+

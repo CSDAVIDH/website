@@ -8,8 +8,9 @@ const Card = ({ image, title }) => {
       <div className='absolute w-full h-full bg-black/50 rounded-xl text-white z-10 flex flex-col items-center justify-center gap-5
       -bottom-20 group-hover:bottom-0 opacity-0 group-hover:opacity-100 transition-all duration-300'>
         <h3 className='font-bold text-2xl mt-4'>{title}</h3>
-        <Button link="#" text="Explore" />
+        <Button link="#" text="Know more..." />
       </div>
+      
     </div>
   )
 }

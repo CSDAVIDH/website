@@ -8,7 +8,6 @@ import 'swiper/css/navigation';
 const CategorieSlider = () => {
   return (
     <div>
-
     </div>
   )
 }
