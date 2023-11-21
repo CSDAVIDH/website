@@ -4,10 +4,9 @@ import Card from './Card'
 
 const Product = () => {
   return (
-    <section id='product' className='max-w-[1640px] mx-auto p-4 py-16'>
-
+    <section id='product' className='max-w-[1640px] mx-auto p-4 py-16 bg-slate-500'>
       <Headline title="Products" />
-      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-6 py-16'>
+      <div className='grid md:grid-cols-2 lg:grid-cols-3 gap-8 px-8 py-16'>
         <Card image="/icons/computacion.png" title="Computing" />
         <Card image="/icons/megafono.png" title="Neighborhood electronic security" />
         <Card image="/icons/alarma.png" title="Electronic security" />
