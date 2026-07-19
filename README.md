@@ -20,6 +20,25 @@ You can start editing the page by modifying `app/page.js`. The page auto-updates
 
 This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
 
+## Google Maps API configuration
+
+This project uses `@react-google-maps/api` to render the map in the contact section. You must provide a valid Google Maps JavaScript API key in a local environment file.
+
+1. Copy `.env.local.example` to `.env.local`
+2. Replace the placeholder value with your real key:
+
+```env
+NEXT_PUBLIC_GOOGLE_MAPS_API_KEY=YOUR_GOOGLE_MAPS_API_KEY_HERE
+```
+
+3. Restart the development server:
+
+```bash
+npm run dev
+```
+
+4. Make sure the Maps JavaScript API is enabled in your Google Cloud project and the key is active.
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:

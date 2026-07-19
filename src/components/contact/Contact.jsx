@@ -1,72 +1,91 @@
 'use client'
-import React from 'react'
-import Headline from '../product/Headline'
-import { MdLocationCity, MdAttachEmail } from 'react-icons/md'
+import { FaWhatsapp } from 'react-icons/fa'
 import { GiVibratingSmartphone } from 'react-icons/gi'
-import { PiGoogleChromeLogoDuotone } from 'react-icons/pi'
+import { MdAccessTime, MdAttachEmail, MdLocationCity } from 'react-icons/md'
 import Formulario from './Formulario'
+import Headline from '../product/Headline'
 import Maps from './Maps'
 
+const contactItems = [
+  {
+    icon: MdLocationCity,
+    title: 'Dirección',
+    description: 'Av. Landaeta C./ Rosas No. 4516, La Paz'
+  },
+  {
+    icon: GiVibratingSmartphone,
+    title: 'Teléfono',
+    description: '(+591) 71558038'
+  },
+  {
+    icon: MdAttachEmail,
+    title: 'Correo',
+    description: 'info.seseeit@gmail.com'
+  },
+  {
+    icon: MdAccessTime,
+    title: 'Horario',
+    description: 'Lun - Vie: 08:00 - 18:00'
+  }
+]
 
+const ContactCard = ({ item }) => {
+  const Icon = item.icon
+
+  return (
+    <div className='rounded-3xl bg-slate-800/70 p-5'>
+      <div className='inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-cyan-500/10 text-cyan-300'>
+        <Icon size={24} />
+      </div>
+      <h3 className='mt-4 text-lg font-semibold text-white'>{item.title}</h3>
+      <p className='mt-2 text-slate-300'>{item.description}</p>
+    </div>
+  )
+}
 
 const Contact = () => {
   return (
-    <section id='contact' className='bg-slate-700  text-white min-h-[520px] py-16'>
-      <div className='container mx-auto h-fit'>
-        <div>
-          <Headline title="Contact" />
+    <section id='contact' className='bg-slate-950 text-white py-20'>
+      <div className='container mx-auto px-4 sm:px-6 lg:px-8'>
+        <div className='max-w-3xl mx-auto text-center'>
+          <Headline title='Contacto' />
+          <p className='mt-6 text-slate-300'>Hable con un asesor técnico y reciba una propuesta personalizada para su proyecto de ingeniería.</p>
         </div>
-        {/*contenedor 1 grid*/}
-        {/*contendor uno 4 tarjetas grid*/}
-        <div className='text-white py-4  gap-4 grid md:grid-cols-4 sm:grid-cols-1 md:grid-rows-1 sm:grid-rows-4 '>
 
-          <div className='rounded-lg max-h-[160px] md:max-h-[200px] w-full flex flex-col items-center text-center py-4 md:shadow-2xl'>
-            <MdLocationCity size={60} className='text-green-600 ' />
-            <h1 className='text-2xl '>Address</h1>
-            <p>Av./ Landaeta C./ Rosas <br /> No./4516 Ciudad de Lapaz</p>
+        <div className='mt-12 grid gap-8 lg:grid-cols-2'>
+          <div className='rounded-3xl border border-slate-800/70 bg-slate-900/90 p-8 shadow-2xl'>
+            <div className='grid gap-4 sm:grid-cols-2'>
+              {contactItems.map((item) => (
+                <ContactCard key={item.title} item={item} />
+              ))}
+            </div>
+
+            <div className='mt-8 rounded-3xl bg-slate-800/70 p-6'>
+              <p className='uppercase tracking-[0.25em] text-cyan-300'>WhatsApp</p>
+              <a href='https://wa.me/59171558038' target='_blank' rel='noreferrer' className='mt-3 inline-flex items-center gap-3 rounded-full bg-cyan-500 px-5 py-3 text-sm font-semibold text-slate-950 transition hover:bg-cyan-400'>
+                <FaWhatsapp /> Chat inmediato
+              </a>
+            </div>
           </div>
 
-          <div className='rounded-lg w-full max-h-[160px] md:max-h-[200px] flex flex-col items-center text-center py-4 md:shadow-2xl'>
-            <GiVibratingSmartphone size={60} className='text-green-600 ' />
-            <h1 className='text-2xl ms:text- '>Contact</h1>
-            <p>(+591) 71558038 <br />
-              71525711 - 71564192</p>
-          </div>
-
-          <div className=' rounded-lg w-full max-h-[160px] md:max-h-[200px] flex flex-col items-center text-center py-4 md:shadow-2xl'>
-            <MdAttachEmail size={60} className='text-green-600 ' />
-            <h1 className='text-2xl '>Email Address</h1>
-            <p>info.seseeit@gmail.com <br /> melina.seseeit@gmail.com</p>
-          </div>
-
-          <div className=' rounded-lg w-full max-h-[160px] md:max-h-[200px] flex flex-col items-center text-center py-4 md:shadow-2xl'>
-            <PiGoogleChromeLogoDuotone size={60} className='text-green-600 ' />
-            <h1 className='text-2xl '>WebSite</h1>
-            <p>www.seseeit.com</p>
+          <div className='rounded-3xl border border-slate-800/70 bg-slate-900/90 p-8 shadow-2xl'>
+            <h3 className='text-2xl font-semibold text-white'>Solicitud de cotización</h3>
+            <p className='mt-4 text-slate-400'>Complete el formulario y nuestro equipo técnico le contactará con la mejor propuesta.</p>
+            <div className='mt-8'>
+              <Formulario />
+            </div>
           </div>
         </div>
 
-        {/* contendor dos 2 grid*/}
-        <div className='grid md:grid-cols-2  md:grid-rows-1 sm:grid-rows-2 gap-4 py-4 px-4'>
-          
-          <div className='my-4 gap-4 lg:py-16 px-8 mx-auto w-full rounded-md'>
-            <h2 className='mb-4 text-3xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white'>Contact Us</h2>
-            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
-            <Formulario />
-          </div>
-          <div className=' my-4 gap-4 lg:py-16 px-8 mx-auto h-max '>
-            <h2 className='mb-4 text-3xl tracking-tight font-extrabold text-center text-gray-900 dark:text-white'>Maps</h2>
-            <p className="mb-8 lg:mb-16 font-light text-center text-gray-500 dark:text-gray-400 sm:text-xl">Got a technical issue? Want to send feedback about a beta feature? Need details about our Business plan? Let us know.</p>
+        <div className='mt-12 rounded-3xl border border-slate-800/70 bg-slate-900/90 p-8 shadow-2xl'>
+          <h3 className='text-2xl font-semibold text-white'>Ubicación</h3>
+          <p className='mt-3 text-slate-400'>Encuéntrenos en La Paz, Bolivia. Atención a proyectos nacionales e internacionales.</p>
+          <div className='mt-6 h-64 sm:h-80 lg:h-[420px] rounded-3xl overflow-hidden border border-slate-800'>
             <Maps />
           </div>
-
         </div>
-
-        
-
-        
       </div>
-    </section >
+    </section>
   )
 }
 
